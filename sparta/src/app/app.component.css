@@ -1,0 +1,21 @@
+.container {
+    margin-top: 10%;
+    width: 30%;
+    height: 50vh;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: aliceblue;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.register{
+    width: 300px;
+    color: rgb(61, 134, 102);
+    background-color: rgb(179, 241, 214);
+}
+.input-register{
+    width: 300px;
+}

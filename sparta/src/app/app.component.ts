@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
+import { HlmInputDirective } from '@spartan-ng/ui-input-helm';
+import intlTelInputModule from 'intl-tel-input';
+import 'intl-tel-input/build/css/intlTelInput.css';
 
 @Component({
   standalone: true,
-  imports: [HlmButtonDirective],
+  imports: [HlmButtonDirective, HlmInputDirective],
   selector: 'app-root',
-  template: `<button hlmBtn class="custom-button">hello from {{ title }}</button>`,
-  styles: [`
-    .custom-button {
-      background-color: blue;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-  `]
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+ngOnInit(): void {
+  const inputElement = document.querySelector('#phone') as HTMLInputElement;
+  if (inputElement) {
+    intlTelInputModule(inputElement, {
+      initialCountry: 'ru',
+      separateDialCode: true,
+      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+    });
+  }
+}
   title = 'sparta';
 }
