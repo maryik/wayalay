@@ -1,0 +1,21 @@
+<!-- src/app/model-verification/model-verification.component.html -->
+<div class="dialog-header">
+  <h2>Подтверждение номера телефона</h2>
+</div>
+<div class="dialog-content">
+  <p>Не беспокойтесь! Это базовая процедура</p>
+  <p>Код подтверждения номера телефона</p>
+  <p>На Ваш номер телефона <strong>{{ formattedPhoneNumber }}</strong> было отправлено сообщение с кодом подтверждения регистрации. Введите полученный код в поле:</p>
+  <div class="verification-code-container">
+    <input maxlength="1" class="verification-code-input" />
+    <input maxlength="1" class="verification-code-input" />
+    <input maxlength="1" class="verification-code-input" />
+    <input maxlength="1" class="verification-code-input" />
+    <input maxlength="1" class="verification-code-input" />
+    <input maxlength="1" class="verification-code-input" />
+  </div>
+  <p class="resend-code">{{ countdownText }} Отправить код повторно</p>
+</div>
+<div class="dialog-actions">
+  <button class="dialog-close-button">Закрыть</button>
+</div>

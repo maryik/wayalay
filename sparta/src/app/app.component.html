@@ -1,6 +1,15 @@
 <div class="container">
-    <input hlmInput type="tel" placeholder="Номер телефона" class="input-register" id="phone">
-<input hlmInput type="password" placeholder="Пароль" class="input-register" id="password">
-<input hlmInput type="password" placeholder="Повторите пароль" class="input-register" id="repeat-password">
-<button hlmBtn variant="default" class="register" id="register-button">Заргестрироваться</button>
-</div>
+    <div class="input-container">
+      <input hlmInput type="tel" placeholder="Номер телефона" class="input-register" id="phone">
+    </div>
+    <div class="input-container">
+      <input hlmInput type="password" placeholder="Пароль" class="input-register" id="password">
+      <button type="button" class="toggle-password" (click)="togglePasswordVisibility('password')">👁️</button>
+    </div>
+    <div class="input-container">
+      <input hlmInput type="password" placeholder="Повторите пароль" class="input-register" id="repeat-password">
+      <button type="button" class="toggle-password" (click)="togglePasswordVisibility('repeat-password')">👁️</button>
+    </div>
+    <button hlmBtn variant="default" class="register" id="register-button">Зарегистрироваться</button>
+  </div>
+  
